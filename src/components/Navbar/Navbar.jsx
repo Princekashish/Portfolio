@@ -1,71 +1,90 @@
-import React, { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useEffect, useState } from "react";
+import { AiOutlineUser } from "react-icons/ai";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 function Navbar() {
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setCursor({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: cursor.x - 16,
+      y: cursor.y - 16,
+    },
+    text: {
+      x: cursor.x - 75,
+      y: cursor.y - 75,
+      height: 150,
+      width: 150,
+      backgroundColor: "#fff",
+      mixBlendMode: "difference",
+    },
+  };
+
+  const textEnter = () => {
+    setCursorVariant("text");
+  };
+
+  const textLeave = () => {
+    setCursorVariant("default");
+  };
+
+  useGSAP(() => {
+    gsap.to("#navbar", {
+      opacity: 1,
+
+      y: 0,
+      delay: 1,
+      ease: "power2.inOut",
+    });
+  });
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  const navbar = [
+    {
+      text: "About",
+    },
+    {
+      text: "Resume",
+    },
+    {
+      text: "Work",
+    },
+  ];
 
   return (
     <>
-      <nav
-        className={`fixed z-50 top-0 left-0 w-full p-6 md:p-8 flex items-center justify-between shadow-md bg-white ${
-          isOpen ? "hidden" : ""
-        }`}
-      >
-        <div>
-          <h1 className="font-bold text-lg md:text-xl font-poppes">
-            <a href="/">Prince.dev</a>
-          </h1>
+      <div className="fixed bottom-0 w-full p-5 z-10">
+        <div className="flex justify-center items-center gap-5 bg-[#EFEFEF]/55 brightness-90 backdrop-blur-xl rounded-xl p-3 shadow-xl flex-wrap">
+          {navbar.map((items, i) => {
+            return (
+              <button key={i} className="px-4 py-2 rounded-xl   font-DM_sans font-medium ">
+                {items.text}
+              </button>
+            );
+          })}
         </div>
-        <ul className="hidden md:flex md:flex-row md:gap-10 md:font-poppes md:items-center md:justify-end md:font-medium">
-          <a href="#home">
-            <li className="hover:text-zinc-100">Home</li>
-          </a>
-          <a href="#About">
-            <li className="hover:text-zinc-100">About</li>
-          </a>
-          <a href="#project">
-            <li className="hover:text-zinc-100">Project</li>
-          </a>
-          <a href="#contact">
-            <li className="hover:text-zinc-100">Contact</li>
-          </a>
-        </ul>
-        <div>
-          <GiHamburgerMenu
-            size={25}
-            onClick={toggle}
-            className="cursor-pointer md:hidden"
-          />
-        </div>
-      </nav>
-      {isOpen && (
-        <div className="fixed  top-0 w-[100%]   text-center transition-all ease-in-out z-[300] bg-white md:static">
-          <ul className="text-[23px]  h-[100vh] flex flex-col gap-10 font-poppes  justify-center items-center font-medium " onClick={toggle}>
-            <a href="#home">
-              <li className="hover:text-zinc-100" onClick={toggle}>Home</li>
-            </a>
-            <a href="#About">
-              <li className="hover:text-zinc-100" onClick={toggle}>About</li>
-            </a>
-            <a href="#project">
-              <li className="hover:text-zinc-100" onClick={toggle}>Project</li>
-            </a>
-            <a href="#contact">
-              <li className="hover:text-zinc-100" onClick={toggle}>Contact</li>
-            </a>
-          </ul>
-          <AiOutlineClose
-            size={25}
-            onClick={toggle}
-            className="cursor-pointer absolute top-5 right-5 md:hidden"
-          />
-        </div>
-      )}
+      </div>
     </>
   );
 }

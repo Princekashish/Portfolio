@@ -1,22 +1,26 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./App.css";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Project from "./components/Portfolio/Project";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import { Outlet } from "react-router-dom";
+import { motion } from "framer-motion";
+import Laptop from "./components/Laptop";
 
 function App() {
-  const [count, setCount] = useState(0);
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Project />
-      <Contact />
-      <Footer />
+      <div className="min-h-screen bg-[#ffffff] dark:bg-black dark:text-[#EFEFEF]">
+      <div className="hidden xl:block">
+        <Laptop />
+      </div>
+        <div className="block xl:hidden">
+          <Navbar />
+          <main>
+            <Outlet />
+          </main>
+        </div>
+      </div>
+
+    
     </>
   );
 }

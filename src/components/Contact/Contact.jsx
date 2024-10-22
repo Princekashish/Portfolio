@@ -4,23 +4,20 @@ import { MdEmail } from "react-icons/md";
 
 function Contact() {
   return (
-    <div className=" h-[70vh]" id="contact">
-      <div className="flex flex-col justify-center items-center relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-7 ">
-        <h2 className="text-[#137EFB] font-poppes text-xl font-bold">
-          Contact me
-        </h2>
-        <p className="font-poppes text-lg font-medium">Don't be shy! Hit me up! 👇</p>
-        <div className="space-y-12 pt-5">
-          <div className="flex flex-col justify-center items-center" >
-            <FaMapLocationDot size={32} color="#137EFB" />
-            <h1 className="text-xl font-semibold font-poppes">Location</h1>
-            <p className="font-mulish ">Delhi, India</p>
+    <div className=" h-[60vh] flex justify-center items-center dark:bg-black " id="contact">
+      <div className="flex flex-col justify-center items-center gap-3 ">
+        <div className="h-[20px] w-[20px] bg-black rounded-lg " />
+        <div className="flex flex-col gap-2 font-poppins w-3/4 ">
+          <h1 className="text-[2em] font-semibold text-center ">
+            Feel Free to <span className="text-orange-600"> Drop me a line</span>
+          </h1>
+          <div className="flex justify-center items-center gap-2">
+            <div className="h-[8px] w-[8px] bg-green-600 rounded-full" />
+            <p className="font-poppins text-sm">Avilable to work</p>
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <MdEmail size={32} color="#137EFB" />
-            <h1 className="text-xl font-semibold font-poppes">Mail</h1>
-            <a href="princekashish136@gmail.com" className="font-mulish">princekashish136@gmail.com</a>
-          </div>
+        </div>
+        <div className="pt-4 ">
+          <button className="px-14 py-2 bg-zinc-900 text-white rounded-xl uppercase dark:border">Contact</button>
         </div>
       </div>
     </div>

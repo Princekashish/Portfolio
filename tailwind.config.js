@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,8 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        poppes:["Poppins","sans-serif"],
-        mulish:["Mulish","sans-serif"]
+        DM_sans:["DM Sans","sans-serif"],
+        poppins:["Poppins", "sans-serif"],
       }
     },
   },

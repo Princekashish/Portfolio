@@ -1,64 +1,73 @@
-import React from "react";
-import { FiGithub } from "react-icons/fi";
-import { CiLinkedin } from "react-icons/ci";
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { SlGlobe } from "react-icons/sl";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMoon } from "react-icons/io5";
 
 function Home() {
- 
+  useEffect(() => {
+    gsap.to("#mtext", {
+      opacity: 1,
+      y: 0,
+      stagger: 0.25,
+      delay: 1,
+      ease: "power2.inOut",
+    });
+  }, []);
+
   return (
     <>
-      <div className="  pt-[8rem] min-h-[100vh] lg:min-h-[70vh]  bg-[#F9F9F9]  " id="home">
-        <div className=" flex  flex-col-reverse md:flex-row md:gap-9   justify-center items-center ">
-          <div className="text-center mt-5 md:text-left   ">
-            <h1 className="font-bold text-5xl md:text-[55px]   font-poppes">
-              Front-End React <br  />
-              Developer 👋🏽{" "}
-            </h1>
-            <p className="pt-8 md:text-lg font-mulish text-[#2D2E32]">
-              Hi, I'm Prince Kashish. A passionate Front-end React <br />{" "}
-              Developer based in Delhi, India. 📍
-            </p>
-            <div className="flex justify-center gap-3 md:justify-start pt-6">
-            <a href="https://www.linkedin.com/in/prince-kashish-6b6302214/" target="_blank"><CiLinkedin size={33} /></a>
-             <a href="https://github.com/Princekashish" target="_blank"> <FiGithub size={30} /></a>
+      <div className="grid grid-cols-1  p-4 gap-5  ">
+        {/* grid--->1 */}
+        <div className="bg-[#EFEFEF]  rounded-2xl flex flex-col gap-5 dark:bg-[#292929]">
+          <div className="flex justify-between items-start p-5">
+            <img
+              src="dfgp (1).jpeg"
+              alt=""
+              className="h-[100px] w-[100px] rounded-xl"
+            />
+            <div className="flex justify-start items-center gap-2">
+              <div className="h-[8px] w-[8px] bg-green-600 rounded-full" />
+              <p className="font-poppins text-sm">Avilable to work</p>
             </div>
           </div>
-          <div >
-            <img className="h-80  md:h-96" src="./Img/avataaars.png" alt="image" />
+          <div className="p-2 flex flex-col gap-3">
+            <h1 className="text-[2em] font-medium">
+              Hello, my name is Prince Kashish, and I am a{" "}
+              <span className="text-orange-600">Full Stack Developer</span>
+            </h1>
+            <p className="capitalize">📍 Delhi </p>
+          </div>
+          <div className="p-1 flex justify-center items-center gap-5 flex-wrap md:justify-start md:items-start">
+            <a
+              href="mailto:princekashish136@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="font-DM_sans uppercase bg-zinc-900 text-white px-10 py-2 rounded-full text-base font-medium">
+                Contact
+              </button>
+            </a>
+            <a href="/sepResume.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="font-DM_sans dark:border-gray-300 uppercase border border-black px-10 py-2 rounded-full text-base font-medium">
+                GET CV
+              </button>
+            </a>
+          </div>
+          <div className="flex  p-5 gap-5">
+            <FaLinkedin size={35} />
+            <FaGithub size={35} />
           </div>
         </div>
-        <div className="skills  md:justify-center   md:mt-9   flex flex-col md:flex-row md:gap-9 md:items-center   justify-center mt-5 items-center pt-7 ">
-          <p className="font-mulish text-[17px] md:text-center font-semibold  px-4 md:border-r-2 md:py-[1px] border-b-2 md:border-b-0  border-gray-500">
-            Tech Stack{" "}
-          </p>
-          <div className=" mt-7 ">
-            <ul className="flex justify-center mt-4 flex-wrap gap-7 mb-8 ">
-              <li  className="md:hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer">
-                <img src="https://skillicons.dev/icons?i=html,css" alt="" />
-              </li>
-              <li className="md:hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer">
-                <img src="https://skillicons.dev/icons?i=js" alt="" />
-              </li>
-              <li className="md:hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer">
-                <img src="https://skillicons.dev/icons?i=react,next" alt="" />
-              </li>
-              <li className="md:hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer">
-                <img
-                  src="https://skillicons.dev/icons?i=tailwind,figma"
-                  alt=""
-                />
-              </li>
-              <li className="md:hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer">
-                <img
-                  src="https://skillicons.dev/icons?i=nodejs,express"
-                  alt=""
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
+        {/* grid--->2 */}
       </div>
     </>
   );
 }
 
 export default Home;
+//https://dribbble.com/shots/22551818-Bento-portfolio-page-design
+//https://dribbble.com/shots/22594261-Mobile-portfolio
+//https://www.behance.net/gallery/188411829/Minimal-Portfolio-Design-Bento-Style
+//https://www.figma.com/community/file/1334784852030646760
