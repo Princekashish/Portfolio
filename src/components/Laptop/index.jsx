@@ -131,7 +131,7 @@ function Laptop() {
             </div>
 
             {/* work Section */}
-            <div className=" row-span-2 col-start-4 row-start-2 bg-[#292929] rounded-2xl flex flex-col justify-between p-6 dark:bg-[#efefef] dark:text-black">
+            <div className=" row-span-2 font-DM_sans col-start-4 row-start-2 bg-[#292929] rounded-2xl flex flex-col justify-between p-6 dark:bg-[#efefef] dark:text-black">
               <div className="flex flex-col gap-5">
                 <h2 className="text-3xl font-bold">Works</h2>
                 <p>
