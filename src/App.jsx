@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import Laptop from "./components/Laptop";
@@ -13,7 +13,7 @@ function App() {
         <Laptop />
       </div>
         <div className="block xl:hidden">
-          <Navbar />
+          {/* <Navbar /> */}
           <main>
             <Outlet />
           </main>
