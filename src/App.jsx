@@ -4,14 +4,15 @@ import "./App.css";
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import Laptop from "./components/Laptop";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <>
       <div className="min-h-screen bg-[#ffffff] dark:bg-black dark:text-[#EFEFEF]">
-      <div className="hidden xl:block">
-        <Laptop />
-      </div>
+        <div className="hidden xl:block">
+          <Laptop />
+        </div>
         <div className="block xl:hidden">
           {/* <Navbar /> */}
           <main>
@@ -19,8 +20,7 @@ function App() {
           </main>
         </div>
       </div>
-
-    
+      <Analytics />
     </>
   );
 }

@@ -78,7 +78,10 @@ function Navbar() {
         <div className="flex justify-center items-center gap-5 bg-[#EFEFEF]/55 brightness-90 backdrop-blur-xl rounded-xl p-3 shadow-xl flex-wrap">
           {navbar.map((items, i) => {
             return (
-              <button key={i} className="px-4 py-2 rounded-xl   font-DM_sans font-medium ">
+              <button
+                key={i}
+                className="px-4 py-2 rounded-xl   font-DM_sans font-medium "
+              >
                 {items.text}
               </button>
             );
