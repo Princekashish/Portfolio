@@ -56,8 +56,20 @@ function Home() {
             </a>
           </div>
           <div className="flex  p-5 gap-5">
-            <FaLinkedin size={35} />
-            <FaGithub size={35} />
+            <a
+              href="https://linkedin.com/in/Princekashish"
+              className="text-gray-100 dark:text-black"
+              target="_black"
+            >
+              <FaLinkedin size={35} />
+            </a>
+            <a
+              href="https://github.com/Princekashish/"
+              className="text-gray-100 dark:text-black"
+              target="_black"
+            >
+              <FaGithub size={35} />
+            </a>
           </div>
         </div>
         {/* grid--->2 */}
