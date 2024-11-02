@@ -58,14 +58,14 @@ function Home() {
           <div className="flex  p-5 gap-5">
             <a
               href="https://linkedin.com/in/Princekashish"
-              className="text-gray-100 dark:text-black"
+              className="dark:text-gray-100 text-black"
               target="_black"
             >
               <FaLinkedin size={35} />
             </a>
             <a
               href="https://github.com/Princekashish/"
-              className="text-gray-100 dark:text-black"
+              className="dark:text-gray-100 text-black"
               target="_black"
             >
               <FaGithub size={35} />
