@@ -33,6 +33,19 @@ function Project() {
       ],
     },
     {
+      text: "Crust-Bakery shop",
+      logo: "/crust.png",
+      details:
+        "This Bakey-shop based project ",
+      link: "https://crust-bakery.vercel.app/",
+      techstack: [
+        { text: "React.js" },
+        { text: "Firebase" },
+        { text: "Tailwindcss" },
+        { text: "Redux tool kit" },
+      ],
+    },
+    {
       text: "HappyHarbor E-commerce shop",
       logo: "/happyhover.png",
       details:
@@ -80,7 +93,7 @@ function Project() {
               id="project"
               className="bg-white xl:justify-start   dark:bg-[#292929] xl:dark:bg-white xl:dark:text-black  relative mt-5 flex flex-col justify-center items-start  p-5 gap-5  rounded-2xl  xl:bg-zinc-900  xl:text-[#EFEFEF]"
             >
-              <div className=" rounded-xl xl:dark:bg-transparent dark:bg-[#efefef] xl:bg-[#efefef]">
+              <div className=" rounded-xl xl:dark:bg-transparent dark:bg-[#ffffff] xl:bg-[#ffffff]">
                 <img
                   src={items.logo}
                   alt=""
