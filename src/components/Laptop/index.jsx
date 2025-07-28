@@ -147,22 +147,16 @@ function Laptop() {
             </div>
 
             {/* about Section */}
-            <div className="dark:bg-[#efefef] dark:text-black row-span-3 col-start-5 row-start-1 bg-[#292929] rounded-2xl p-6 flex flex-col justify-between w-full max-w-[20vw] mx-auto">
+            <div className="dark:bg-[#efefef] dark:text-black row-span-3 col-start-5 row-start-1 bg-[#292929] rounded-2xl p-6 flex flex-col justify-between w-full max-w-[20vw] mx-auto ">
               <div className="flex flex-col gap-5  flex-wrap ">
                 <h2 className="text-3xl font-bold">About me</h2>
                 <div className="font-poppins">
                   <p>
-                    Hi, I'm Prince Kashish, a final-year BCA student at VIPS and
-                    a MERN developer. I'm passionate about coding and love
-                    bringing ideas to life through innovative web applications.
-                    My journey in the world of technology has been exciting,
-                    filled with hands-on experience in developing full-stack
-                    applications using{" "}
-                    <span className="underline">
-                      MongoDB, Express.js, React.js, and Node.js
-                    </span>
-                    . I'm constantly exploring new frameworks and tools to
-                    enhance my skill set and stay updated with industry trends..
+                    Hi, I'm Prince Kashish, a passionate full-stack developer with a practical, hands-on approach to building modern, scalable web applications. I don’t just enjoy writing clean code — I enjoy solving real problems and creating digital experiences that actually work for users.
+
+                    Whether it's refining a front-end interface or architecting a solid back-end, I aim for solutions that are thoughtful, efficient, and built to last.
+
+                    If you’re looking for someone who’s excited about building — but also asks the right questions — let’s talk.
                   </p>
                 </div>
               </div>

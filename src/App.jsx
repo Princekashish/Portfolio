@@ -1,8 +1,5 @@
-import { useContext } from "react";
-import "./App.css";
 // import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
-import { motion } from "framer-motion";
 import Laptop from "./components/Laptop";
 import { Analytics } from "@vercel/analytics/react";
 
