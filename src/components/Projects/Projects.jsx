@@ -29,8 +29,8 @@ export default function Projects() {
     {
       name: "MealTracker",
       image: "/mealtrackerwebsite.png",
-      link: "/try",
-      github: "/github",
+      link: "https://mealtracker-three.vercel.app/",
+      github: "https://github.com/Princekashish/Mealtracker",
       description:
         "A full-stack meal tracking app to help users reduce daily meal expense miscalculations.",
       techStack: [
@@ -50,7 +50,7 @@ export default function Projects() {
       name: "Finder AI-powered Project",
       link: "https://experience-finder.vercel.app/",
       image: "/finder.png",
-      github: "/github",
+      github: "https://github.com/Princekashish/Experience-finder",
       description:
         "An AI-powered tool that generates creative learning paths and schedules based on user input.",
       techStack: [
@@ -70,7 +70,7 @@ export default function Projects() {
       name: "ZeroHunger Food Donation",
       link: "https://ibm-zerohunger-project.vercel.app/",
       image: "/zeroHunger.png",
-      github: "/github",
+      github: "https://github.com/Princekashish/IBM-Client",
       description:
         "An initiative focused on ending hunger, ensuring food security, and supporting sustainable development.",
       techStack: [
@@ -90,7 +90,7 @@ export default function Projects() {
       name: "Crust - Bakery Shop",
       link: "https://crust-bakery.vercel.app/",
       image: "/crust.png",
-      github: "/github",
+      github: "https://github.com/Princekashish/Crust",
       description:
         "An online bakery shop with product display, cart system, and order tracking.",
       techStack: ["React.js", "Firebase", "TailwindCSS", "Redux Toolkit"],
@@ -102,7 +102,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="bg-zinc-900 backdrop-blur-3xl flex flex-col gap-5 items-center   text-white py-[18vh] ">
+    <div className="bg-zinc-900 backdrop-blur-3xl flex flex-col gap-5 items-center   text-white git py-[18vh] ">
       {projects.map((project, i) => (
         <div
           ref={(el) => (cardsRef.current[i] = el)}
