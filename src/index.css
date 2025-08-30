@@ -1,23 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .bg-dots {
-    background-image: radial-gradient(
-      circle,
-      rgba(244, 244, 270) 3.4px,
-      transparent 2px
-    );
-    background-size: 5px 5px; /* Adjust the size as needed */
-  }
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-Satoshi: "Satoshi", sans-serif; 
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
 * {
-  scrollbar-color: #8e8e8e #fff;
+  scrollbar-color: rgb(52, 52, 52) black;
   scrollbar-width: thin;
   scroll-behavior: smooth;
   box-sizing: border-box;

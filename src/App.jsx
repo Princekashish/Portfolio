@@ -1,21 +1,31 @@
-// import Navbar from "./components/Navbar/Navbar";
+// App.tsx
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Laptop from "./components/Laptop";
 import { Analytics } from "@vercel/analytics/react";
+import Loader from "./ui/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading (2s) - you can replace with actual loading logic
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <div className="min-h-screen bg-[#ffffff] dark:bg-black dark:text-[#EFEFEF]">
-        <div className="hidden xl:block">
-          <Laptop />
-        </div>
-        <div className="block xl:hidden">
-          {/* <Navbar /> */}
+      <div className="bg-zinc-900">
+        {loading ? (
+          <Loader />
+        ) : (
           <main>
             <Outlet />
           </main>
-        </div>
+        )}
       </div>
       <Analytics />
     </>

@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page from "./Pages/index.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 
 
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", Component:Page },
+      {path:"/project", Component:Projects}
     ],
   },
 ]);
